@@ -1,0 +1,125 @@
+
+<html>  
+    <head>  
+    <script type="text/javascript" src="script.js">
+        </script>  
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+
+    <style>
+        body {margin: 5% auto; background: #f2f2f2; color: #444444; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.8; text-shadow: 0 1px 0 #ffffff; max-width: 73%;}
+        code {background: white;}
+        a {border-bottom: 1px solid #444444; color: #444444; text-decoration: none;}
+        a:hover {border-bottom: 0;}
+    </style>
+    
+    </head>
+    <body onload=finalProject()> 
+    <div>
+    <h1 class="section"> The NBA's Superheroes </h1>
+    <p>When watching the NBA, it may seem like the players are superhuman. They fly through the air with
+    the greatest of ease, and accomplish feats of skill that no mere mortal could dream of.
+    </p>
+
+    <p class = "stop_text"> Here, we'll explore the stories of these superheroes. </p>
+    
+    <br>
+    <div id = "scatterSection">
+    <h2>Explore the Stats</h2>
+    <p>Select a season below, and dive into the stats to see which players were the biggest heroes of that season.
+        You can choose a stat to display on the x and y axes of the graph, and try to find players that you think have the most 
+        outstanding stats. <br>
+        Just hover over a player to see their name and their values of the statistics that you chose. 
+        You can click on a player's dot to add them to your list of favorite superheroes, whom we'll learn more about in
+        the next few visualizations! Once you add some players, the next two visualizations will render and you can learn
+        more about their stories. <br>
+
+        <div id = stat_descriptions>
+            Not sure what the variables mean? <br>
+
+        </div>
+        <p class = "stop_text">
+            Your players are:
+        </p>
+
+        <div id = "heroList">
+
+        </div>
+    </p>
+
+    <div id="controls", class = "center_plot">
+        <label for="season-select">Select Season:</label>
+        <select id="season-select"></select>
+    
+        <label for="x-axis-select">X-Axis:</label>
+        <select id="x-axis-select"></select>
+    
+        <label for="y-axis-select">Y-Axis:</label>
+        <select id="y-axis-select"></select>
+      </div>
+    
+    
+    <div class="tooltip"></div>
+    <div id="scatterPlot", class = "center_plot">
+
+    
+    
+        
+    </div>    
+    </div>
+        
+    <div>
+    <h2>My City Needs Me</h2>
+    Every superhero has a hometown - a city that they use their powers to watch over and protect. 
+    Which cities do your selected players call home? <br>
+    The red dots on the map display the home city that your selected players played in during your selected season.
+    Hover over a dot on the map to see which city it is and who played there! 
+    
+    <div id="map">
+    
+        </div>
+        <div id="map_plot" class="center_plot">
+        </div>
+    </div>    
+    
+    <div>
+    <h2>Teaming up:</h2>
+    Often, superheroes decide to team up to make the most of their powers. NBA players are no exception. <br>
+
+    Take a look at the plot below to see which players were your selected heroes' most loyal sidekicks throughout their entire careers.
+    The turquoise nodes in the graph represent your selected players, and the orange nodes represent all the teammates that they played
+    with during their career. The links represent a connection between one of your selected players and another player (or with another selected player).
+    Two players will be linked if they played at least one season together. Note that these are connections across those players'
+    whole careers, not just your selected season.<br>
+
+    If the link between two players is thicker, that means they played more seasons together, and they were trusty sidekicks
+    for a larger part of your hero's career. You can zoom and drag to change the 
+    cluster that you're looking at and see player's sidekicks in more detail! <br>
+
+    <br>
+    Click on one of the turquoise nodes to display the names of their teammates!
+
+    <br>
+    
+    
+    <div id="player_connections">
+    
+        </div>
+        <div id="teammates_plot" class="center_plot">
+        </div>
+    </div>    
+    <p>
+        Note: if you only selected a few players, or if they haven't shared any teammates, they may be far apart on the graph. 
+        Also note that many players only spent a few years together, so most links will be thin,
+        but some have very strong friendships and thicker links.
+        
+    </p>
+       
+    
+    
+        
+       
+    </body>  
+    </html>  
+    

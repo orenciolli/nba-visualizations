@@ -1,0 +1,21 @@
+.center_plot {
+    margin: auto;
+    text-align: center;
+}
+
+.section {
+    text-align: center;
+}
+
+.stop_text{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold
+}
+
+#stat_descriptions{
+    font-size: 14px;
+}
+#descriptionsDiv{
+    display: "none";
+}
